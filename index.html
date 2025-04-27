@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sell gift cards in Nigeria at the best rates. Owodex offers fast, secure, and rewarding transactions.">
+    <title>GS-MOVERS - Moving made easy</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#28A924',
+              secondary: '#020167',
+              dark: '#243746',
+            },
+            backgroundImage: {
+              'gs-gradient': 'linear-gradient(to bottom, #F8FFF7, #C9FFDF)',
+              'gs-gradient2': 'linear-gradient(to bottom, #FFFFFF, #CFFFE2)',
+            },
+            keyframes: {
+              bounceIn: {
+                '0%': { transform: 'scale(0.8)', opacity: '0' },
+                '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            },
+            animation: {
+              bounceIn: 'bounceIn 1s ease-out',
+              fadeInUp: 'fadeInUp 1s ease-out',
+              float: 'float 3s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#243746] text-white">
+    <!-- Header -->
+    <header class="bg-dark border-b border-gray-800">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="text-2xl font-bold text-yellow-500" style="font-family: Pacifico;color: #33CF2E">
+          <img src="logo.png" alt="GS Movers" loading="lazy" class="" width="140px" />
+        </div>
+        <div class="flex items-center justify-between">
+        <a href="#" class="text-right md:hidden bg-primary hover:bg-green-700 text-white mr-4 px-4 py-2 rounded hover:scale-105">Request a Quote</a>
+        <button id="menu-toggle" aria-label="Toggle navigation menu" class="mt- md:hidden text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        </div>
+        <nav class="hidden md:flex gap-6 text-white">
+          <a href="#" class="hover:text-primary">Home</a>
+          <div class="relative group">
+            <button id="products-button" class="hover:text-primary focus:outline-none flex items-center gap-1">
+              Services
+              <svg class="w-4 h-4 transform transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="products-dropdown" class="absolute left-0 mt-2 w-56 bg-dark text-white rounded shadow-lg hidden z-50">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-primary">House Moving</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-primary">Office Relocation</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-primary">Furniture Removal</a>
+            </div>
+          </div>
+          <a href="#" class="hover:text-primary">About Us</a>
+          <a href="#" class="hover:text-primary">Contact Us</a>
+        </nav>
+        <div class="hidden md:flex gap-3">
+          <a href="tel:1300609117" class="flex items-center gap-2 text-white hover:scale-105 px-4 py-1 font-bold text-xl transition-transform duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+              </svg>
+              1240 645 748
+          </a>
+          <a href="#" class="bg-primary hover:bg-green-700 text-white px-4 py-2 rounded hover:scale-105">Request a Quote</a>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 flex flex-col gap-4 bg-dark">
+        <a href="#" class="hover:text-primary">Home</a>
+        <div class="flex flex-col gap-2">
+          <button id="mobile-products-toggle" class="flex justify-between items-center w-full text-left hover:text-primary focus:outline-none">
+            Services
+            <svg class="w-4 h-4 ml-2 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="mobile-products-menu" class="ml-4 mt-2 flex-col gap-2 hidden">
+            <a href="#" class="block hover:text-primary">House Moving</a>
+              <a href="#" class="block hover:text-primary">Office Relocation</a>
+              <a href="#" class="block hover:text-primary">Furniture Removal</a>
+          </div>
+        </div>
+        <a href="#" class="hover:text-primary">About Us</a>
+        <a href="#" class="hover:text-primary">Contact Us</a>
+        <div class="flex flex-col gap-2">
+          <a href="tel:1300609117" class="flex items-center gap-2 text-white hover:scale-105 pr-4 py-1 font-bold text-xl transition-transform duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+              </svg>
+              1240 645 748
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row items-center justify-between px-6 pt-10 pb-20 bg-gs-gradient">
+      <div class="max-w-lg">
+        <h1 class="text-[#124F30] text-4xl md:text-5xl font-bold leading-tight mb-4" style="font-family:nunito">Moving Made Easy With GS-MOVERS</h1>
+        <p class="text-green-800 mb-6">Reliable. Fast. Affordable. Your trusted moving partner across the city and beyond.</p>
+        <div class="flex gap-4">
+          <a href="#" class="bg-primary hover:bg-green-700 text-white px-6 py-3 font-bold rounded">Book Your Move</a>
+          <a href="#" class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 font-bold rounded">Contact Us</a>
+        </div>
+        <p class="text-green-700 mt-6 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-green-700 mr-2">
+            <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
+            <path d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
+            <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+          </svg>
+          We move your world, one box at a time.
+        </p>
+
+      </div>
+      <div class="mt-10 md:mt-0">
+        <img src="ill.png" alt="GS Movers" loading="lazy" class="w-full animate-float" />
+      </div>
+    </section>
+
+    <!-- Trusted Brands -->
+    <section class="bg-white py-10 px-6 text-black text-center">
+      <div class="flex items-center mb-2 w-full justify-center">
+        <div class="flex items-center w-1/3">
+          <div class="flex-grow border-t-4 border-primary"></div>
+          <h2 class="px-4 text-primary text-2xl whitespace-nowrap text-center" style="font-family: Pacifico;">Request a Callback</h2>
+          <div class="flex-grow border-t-4 border-primary"></div>
+        </div>
+      </div>
+      <p class="text-dark font-bold text-lg mb-2">Leave your number and we will call you right back!</p>
+      <div class="flex w-full">
+        <div class="w-1/2 mx-auto">
+            <div class="mt-2 relative flex flex-wrap items-stretch">
+              <input
+                type="text"
+                class="relative block w-[80%] min-w-0 flex-auto rounded-l border-0 py-3 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="Your phone number"
+                aria-label="Your phone number"
+                aria-describedby="Your phone number"
+                required
+                />
+
+              <span class="flex items-center w-[20%] whitespace-nowrap rounded-r">
+                  <button class="bg-primary hover:bg-green-700 text-white px-6 py-3 font-bold rounded-r border border-primary">Call Me Back</button>
+              </span>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- how it works -->
+    <section class="bg-dark py-10 px-4 text-black text-center">
+      <div class="flex items-center mb-10 w-full justify-center">
+        <div class="flex items-center w-1/3">
+          <div class="flex-grow border-t-4 border-white"></div>
+          <h2 class="px-4 text-white text-2xl whitespace-nowrap text-center" style="font-family: Pacifico;">How it Works</h2>
+          <div class="flex-grow border-t-4 border-white"></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-10">
+        <div class="bg-gs-gradient p-6 rounded-lg shadow transition-transform hover:scale-105 hover:shadow-xl">
+          <div class="flex justify-center items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-12 text-4xl text-primary">
+              <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-dark">Request a Quote</h3>
+          <p class="text-left">Fill out a quick form or call us to get a free, no-obligation moving estimate tailored to your needs.</p>
+        </div>
+        <div class="bg-gs-gradient p-6 rounded-lg shadow transition-transform hover:scale-105 hover:shadow-xl">
+          <div class="flex justify-center items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-12 text-4xl text-primary">
+              <path d="M12 11.993a.75.75 0 0 0-.75.75v.006c0 .414.336.75.75.75h.006a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75H12ZM12 16.494a.75.75 0 0 0-.75.75v.005c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H12ZM8.999 17.244a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.006ZM7.499 16.494a.75.75 0 0 0-.75.75v.005c0 .414.336.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H7.5ZM13.499 14.997a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.005ZM14.25 16.494a.75.75 0 0 0-.75.75v.006c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75h-.005ZM15.75 14.995a.75.75 0 0 1 .75-.75h.005a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75H16.5a.75.75 0 0 1-.75-.75v-.006ZM13.498 12.743a.75.75 0 0 1 .75-.75h2.25a.75.75 0 1 1 0 1.5h-2.25a.75.75 0 0 1-.75-.75ZM6.748 14.993a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" />
+              <path fill-rule="evenodd" d="M18 2.993a.75.75 0 0 0-1.5 0v1.5h-9V2.994a.75.75 0 1 0-1.5 0v1.497h-.752a3 3 0 0 0-3 3v11.252a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3V7.492a3 3 0 0 0-3-3H18V2.993ZM3.748 18.743v-7.5a1.5 1.5 0 0 1 1.5-1.5h13.5a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-13.5a1.5 1.5 0 0 1-1.5-1.5Z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-dark">Make a Booking</h3>
+          <p class="text-left">Choose your preferred moving date and time, and we'll confirm all the details to make it official.</p>
+        </div>
+        <div class="bg-gs-gradient p-6 rounded-lg shadow transition-transform hover:scale-105 hover:shadow-xl">
+          <div class="flex justify-center items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-12 text-4xl text-primary text-center">
+              <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
+              <path d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
+              <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-dark">We Move You</h3>
+          <p class="text-left">Our professional team arrives on time, handles everything with care, and gets you safely to your new home.</p>
+        </div>
+      </div>
+      <a href="#" class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 font-bold rounded">Get Started</a>
+    </section>
+
+    <!-- our services -->
+    <section class="bg-white pt-10 pb-6 px-4 text-black text-center">
+      <div class="flex items-center mb-10 w-full justify-center">
+        <div class="flex items-center w-1/3">
+          <div class="flex-grow border-t-4 border-primary"></div>
+          <h2 class="px-4 text-primary text-2xl whitespace-nowrap text-center" style="font-family: Pacifico;">Our Services</h2>
+          <div class="flex-grow border-t-4 border-primary"></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-10">
+        <div class="bg-[#EEFFF2] p-6 rounded-lg shadow transition-transform hover:scale-105 hover:shadow-xl">
+          
+          <h3 class="font-bold text-lg mb-2 text-dark">Home Moving</h3>
+          <p class="text-left text-gray-700">Stress-free home relocations with full packing, loading, transport and unpacking services. We handle everything from studio apartments to large family homes with white-glove care.</p>
+        </div>
+        <div class="bg-[#EEFFF2] p-6 rounded-lg shadow transition-transform hover:scale-105 hover:shadow-xl">
+          
+          <h3 class="font-bold text-lg mb-2 text-dark">Office Relocation</h3>
+          <p class="text-left text-gray-700">Minimize business downtime with our efficient office moving solutions. We work after hours or weekends to ensure smooth transitions with minimal disruption.</p>
+        </div>
+        <div class="bg-[#EEFFF2] p-6 rounded-lg shadow transition-transform hover:scale-105 hover:shadow-xl">
+          
+          <h3 class="font-bold text-lg mb-2 text-dark">Furniture Removal</h3>
+          <p class="text-left text-gray-700">We go beyond standard moving to provide complete speciality solutions such as furniture disassembly/reassembly and special item handling (pianos, art, etc.).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-gs-gradient2 pt-8 pb-16 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <img src="delivery.svg" alt="Wallet" loading="lazy" class="w-2/5 animate-float"/>
+        <div class="flex flex-col items-center w-full">
+
+          <div class="flex items-center mb-6 w-full justify-center">
+            <div class="flex items-center w-2/3">
+              <div class="flex-grow border-t-4 border-primary"></div>
+              <h2 class="px-4 text-primary text-2xl whitespace-nowrap text-center" style="font-family: Pacifico;">Why Choose Us</h2>
+              <div class="flex-grow border-t-4 border-primary"></div>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold mb-10 text-dark text-center">Reasons to Choose GS-MOVERS</h2>
+          <ul class="space-y-6 text-dark">
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white font-bold p-3">
+                1
+              </div>
+              <div>
+                <strong class="text-dark text-lg">Fully licensed & insured movers</strong><br/>
+                <span class="text-gray-500 text-sm">Your belongings are protected with our comprehensive insurance coverage. Our team undergoes rigorous training and background checks to ensure your complete peace of mind.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white font-bold p-3">
+                2
+              </div>
+              <div>
+                <strong class="text-dark text-lg">Transparent pricing with no hidden fees</strong><br/>
+                <span class="text-gray-500 text-sm">We provide detailed, binding estimates with no hidden fees. What we quote is what you pay - no last-minute charges or unexpected costs.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white font-bold p-3">
+                3
+              </div>
+              <div>
+                <strong class="text-dark text-lg">Professional, background-checked crews</strong><br/>
+                <span class="text-gray-500 text-sm">From custom crating for valuables to furniture padding and floor protection, we treat your home with the same care as our own.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-dark text-black py-16 px-6">
+      <div class="flex items-center mb-6 w-full justify-center">
+        <div class="flex items-center w-1/3">
+          <div class="flex-grow border-t-4 border-primary"></div>
+          <h2 class="px-4 text-primary text-2xl whitespace-nowrap text-center" style="font-family: Pacifico;">Testimonials</h2>
+          <div class="flex-grow border-t-4 border-primary"></div>
+        </div>
+      </div>
+      <h2 class="text-2xl font-bold text-center mb-10 text-white">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="italic mb-4 text-gray-700 text-sm">GS-MOVERS made my home move so easy! The team was punctual, careful with my furniture, and helped me set up everything at the new place. Highly recommend them!</p>
+          <p class="font-bold text-dark text-sm">Adebayo Tebusi</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="italic mb-4 text-gray-700 text-sm">GS-MOVERS helped us relocate our office quickly and efficiently. They took great care of our equipment, and we were back to work in no time. Fantastic service!</p>
+          <p class="font-bold text-dark text-sm">Cynthia Nina</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="italic mb-4 text-gray-700 text-sm">As a first-time mover, I was nervous, but GS-MOVERS made it stress-free. They packed everything carefully, and the move was completed faster than I expected!</p>
+          <p class="font-bold text-dark text-sm">James Keller</p>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    <!-- FAQs Section -->
+    <section class="bg-white text-dark py-16 px-6">
+      <div class="flex items-center mb-10 w-full justify-center">
+        <div class="flex items-center w-1/2">
+          <div class="flex-grow border-t-4 border-primary"></div>
+          <h2 class="px-4 text-primary text-2xl whitespace-nowrap text-center" style="font-family: Pacifico;">Frequently Asked Questions</h2>
+          <div class="flex-grow border-t-4 border-primary"></div>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div>
+          <h3 class="font-bold">How do I get a moving quote?</h3>
+          <p class="text-gray-500">Simply fill out our online form or call us directly. We'll provide a free, no-obligation quote tailored to your specific needs.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">How early should I book my move with GS-MOVERS?</h3>
+          <p class="text-gray-500">We recommend booking at least 1-2 weeks in advance to secure your preferred date and time, especially during peak seasons.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Do you offer packing and unpacking services?</h3>
+          <p class="text-gray-500">Yes! We offer professional packing, unpacking, and even packing materials to make your move completely stress-free.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Is my furniture and belongings insured during the move?</h3>
+          <p class="text-gray-500">Absolutely. We handle your items with care, and our service includes basic insurance coverage. Additional coverage options are also available.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Can you help move heavy or fragile items like pianos and antiques?</h3>
+          <p class="text-gray-500">Definitely. Our team specializes in handling heavy, delicate, and valuable items with the right equipment and techniques.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">How long will my move take?</h3>
+          <p class="text-gray-500">Every move is different! The time depends on the distance, amount of items, and access to your properties. We'll provide an accurate estimate after a quick survey.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">What should I do to prepare before the movers arrive?</h3>
+          <p class="text-gray-500">We recommend labeling boxes, securing valuables separately, and reserving parking if needed. We'll also guide you through a full checklist after booking!</p>
+        </div>
+        <div>
+          <h3 class="font-bold">What if my moving date changes?</h3>
+          <p class="text-gray-500">No worries - just contact us as soon as possible. We're flexible and will do our best to adjust to your new schedule.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Do you disassemble and reassemble furniture?</h3>
+          <p class="text-gray-500">Yes, we can disassemble and reassemble beds, desks, and other large furniture pieces as part of your moving package.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-6 px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-10">
+        <div>
+          <h4 class="text-primary uppercase text-sm font-bold">Get In Touch</h4>
+          <a href="tel:1300609117" class="flex items-center gap-2 text-white hover:scale-105 mt-4 text-sm transition-transform duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+
+              1240 645 748
+          </a>
+          <a href="tel:1300609117" class="flex items-center gap-2 text-white hover:scale-105 mt-4 text-sm transition-transform duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+          </svg>
+
+
+              Melbourne, Australia
+          </a>
+          <a href="mail-to:info@gsmovers.au" class="flex items-center gap-2 text-white hover:scale-105 mt-4 text-sm transition-transform duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+
+
+              info@gsmovers.au
+          </a>
+        </div>
+        <div class="text-sm">
+          <h4 class="text-primary uppercase text-sm font-bold">Services</h4>
+          <a href="#" class="block mt-4 hover:text-primary">House Moving</a>
+          <a href="#" class="block mt-4 hover:text-primary">Office Relocation</a>
+          <a href="#" class="block mt-4 hover:text-primary">Furniture Removal</a>
+        </div>
+        <div class="text-sm">
+          <h4 class="text-primary uppercase text-sm font-bold">Other Links</h4>
+          <a href="#" class="block mt-4 hover:text-primary">Request a Quote</a>
+          <a href="#" class="block mt-4 hover:text-primary">About Us</a>
+          <a href="#" class="block mt-4 hover:text-primary">Contact Us</a>
+        </div>
+      </div>
+      <div class="border-t pt-2 flex justify-between">
+        <p class="text-left text-sm text-white">&copy; 2025 GS-MOVERS. All rights reserved.</p>
+        <a href="#" class="text-sm text-primary hover:underline">Admin Login</a>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      const productsButton = document.getElementById('products-button');
+      const productsDropdown = document.getElementById('products-dropdown');
+
+      productsButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        productsDropdown.classList.toggle('hidden');
+      });
+
+      window.addEventListener('click', () => {
+        productsDropdown.classList.add('hidden');
+      });
+
+      const mobileProductsToggle = document.getElementById('mobile-products-toggle');
+      const mobileProductsMenu = document.getElementById('mobile-products-menu');
+
+      mobileProductsToggle.addEventListener('click', () => {
+        mobileProductsMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
